@@ -1,6 +1,5 @@
-import React from "react";
 import { Button } from "@/components/ui/button";
-import { Linkedin, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 
 const ContactSection = () => {
   return (
