@@ -1,9 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Mail } from "lucide-react";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-24">
+    <section id="contact">
       <div className="mx-auto max-w-3xl px-4 space-y-12">
         <div className="text-center space-y-6">
           <span className="inline-block rounded-full bg-muted px-4 py-1 text-sm font-medium">
@@ -29,18 +28,6 @@ const ContactSection = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"
               >
-                <Mail size={18} />
-                Work With Me
-              </a>
-            </Button>
-            <Button asChild size="lg" variant="secondary">
-              <a
-                href="https://www.linkedin.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2"
-              >
-                <Mail size={18} />
                 Work With Me
               </a>
             </Button>

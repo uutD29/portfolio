@@ -11,10 +11,10 @@ const skills = [
 const SkillsSection = () => {
   return (
     <section id="skills">
-      <div className="mx-auto max-w-3xl px-4 space-y-8">
+      <div className="mx-auto max-w-3xl space-y-8">
         
         {/* Title */}
-        <h2 className="text-3xl font-bold tracking-tight">
+        <h2 className="text-2xl font-semibold tracking-tight">
           Skills
         </h2>
 

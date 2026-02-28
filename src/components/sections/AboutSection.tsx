@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { Button } from "@/components/ui/button"
 
 const AboutSection = () => {
   const [isExpanded, setIsExpanded] = useState(false)
@@ -14,24 +13,25 @@ const AboutSection = () => {
           and creating digital experiences that are clean, intuitive, and
           aligned with real business goals.
           
+          {!isExpanded && "... "}
+
           <span
-            className={`transition-all duration-300 ${
-              isExpanded ? "inline" : "hidden"
+            className={`transition-opacity duration-300 ${
+              isExpanded ? "inline opacity-100" : "hidden opacity-0"
             }`}
           >
             {" "}
             My background in IT infrastructure and cybersecurity allows me to
             approach development with both performance and security in mind.
           </span>
-        </p>
 
-        <Button
-          variant="link"
-          className="p-0 h-auto text-sm"
-          onClick={() => setIsExpanded(!isExpanded)}
-        >
-          {isExpanded ? "Show less" : "Read more"}
-        </Button>
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="ml-1 font-medium text-foreground hover:underline focus:outline-none"
+          >
+            {isExpanded ? "Show less" : "Read more"}
+          </button>
+        </p>
       </div>
     </section>
   )

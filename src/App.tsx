@@ -13,8 +13,8 @@ function App() {
     <Container>
       <main className="space-y-12">
         <HeroSection />
-        <SkillsSection/>
         <AboutSection />
+        <SkillsSection/>
         <ExperienceSection />
         <ProjectsSection />
         <ContactSection/>
