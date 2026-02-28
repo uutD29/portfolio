@@ -1,19 +1,20 @@
 import { ModeToggle } from "@/components/mode-toggle"
+import logoBlack from "@/assets/logo-b.png"
+import logoWhite from "@/assets/logo-w.png"
 
 const Navbar = () => {
-  const base = import.meta.env.BASE_URL
-
   return (
     <header className="sticky top-0 z-50 border-b bg-background">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
+        
         <div>
           <img
-            src={`${base}logo-b.png`}
+            src={logoBlack}
             alt="Logo"
             className="h-4 dark:hidden"
           />
           <img
-            src={`${base}logo-w.png`}
+            src={logoWhite}
             alt="Logo"
             className="hidden h-4 dark:block"
           />
