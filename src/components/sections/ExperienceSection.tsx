@@ -1,3 +1,4 @@
+import { Badge } from "../ui/badge";
 
 const experiences = [
   {
@@ -21,9 +22,9 @@ const ExperienceSection = () => {
         
         {/* Header */}
         <div className="text-center space-y-6">
-          <span className="inline-block rounded-full bg-muted px-4 py-1 text-sm font-medium">
+          <Badge variant="secondary" className="px-4 py-1">
             Experience
-          </span>
+          </Badge>
 
           <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
             Professional Journey

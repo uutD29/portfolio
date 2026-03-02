@@ -40,9 +40,9 @@ const ProjectsSection = () => {
       <div className="mx-auto max-w-5xl px-4 space-y-12">
 
         <div className="text-center space-y-6">
-          <span className="inline-block rounded-full bg-muted px-4 py-1 text-sm font-medium">
+          <Badge variant="secondary" className="px-4 py-1">
             Projects
-          </span>
+          </Badge>
 
           <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
             Some of My Work

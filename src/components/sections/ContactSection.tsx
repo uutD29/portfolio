@@ -1,13 +1,14 @@
 import { Button } from "@/components/ui/button";
+import { Badge } from "../ui/badge";
 
 const ContactSection = () => {
   return (
     <section id="contact">
       <div className="mx-auto max-w-3xl px-4 space-y-12">
         <div className="text-center space-y-6">
-          <span className="inline-block rounded-full bg-muted px-4 py-1 text-sm font-medium">
+          <Badge variant="secondary" className="px-4 py-1">
             Contact
-          </span>
+          </Badge>
 
           <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
             Let’s Build Something Great Together
