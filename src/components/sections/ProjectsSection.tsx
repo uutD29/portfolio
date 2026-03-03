@@ -19,8 +19,6 @@ import {
   DialogClose,
 } from "@/components/ui/dialog";
 
-import { ScrollArea } from "@/components/ui/scroll-area";
-
 const projects = [
   {
     title: "SportON Website",
