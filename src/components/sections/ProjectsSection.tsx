@@ -25,12 +25,12 @@ const projects = [
   {
     title: "SportON Website",
     description:
-      "E-commerce website built with Next.js, Tailwind CSS, and Railway.",
+      "E-commerce website built with Next.js and Tailwind CSS.",
     image: "/images/project1.png",
-    badge: "Featured",
+    badge: "E-Commerce",
     liveUrl: "https://sport-on-fe.vercel.app/", 
     details:
-      "SportON is a fully responsive e-commerce platform developed using Next.js and styled with Tailwind CSS for a modern, utility-first design system. The application leverages server-side rendering and optimized routing to ensure fast performance and strong SEO. It features dynamic product listings, detailed product pages with high-quality visuals, and a structured layout focused on user experience. The project is deployed on Railway, ensuring reliable hosting and seamless deployment workflows. Special attention was given to performance optimization, clean component architecture, and scalable code structure to support future growth and feature expansion.",
+      "Full-stack e-commerce platform developed using Next.js and Tailwind CSS. The project includes a dynamic product listing system, category-based browsing, and structured UI components for product presentation. Designed with a focus on clean layout architecture, reusable components, and organized page structure to simulate a real-world online store experience.",
   },
 ];
 
@@ -49,15 +49,14 @@ const ProjectsSection = () => {
           </h2>
 
           <p className="text-muted-foreground leading-relaxed">
-            A showcase of projects that demonstrate my skills in Web
-            Development, IT Support, and Infrastructure Management.
+            A showcase of my web development projects, highlighting modern, functional websites built with current frameworks and best practices
           </p>
         </div>
 
         <div className="grid gap-8 sm:grid-cols-2">
           {projects.map((project, index) => (
             <Dialog key={index}>
-              <Card className="relative w-full pt-0 overflow-hidden">
+              <Card className="relative w-full pt-0 overflow-hidden justify-between">
                 <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
                 <img
                   src={project.image}
@@ -93,11 +92,9 @@ const ProjectsSection = () => {
                     className="w-full rounded-lg"
                   />
 
-                  <ScrollArea className="h-48 w-full rounded-md border p-4">
                     <p className="text-sm text-muted-foreground leading-relaxed">
                       {project.details}
                     </p>
-                  </ScrollArea>
                 </div>
 
                 <div className="mt-6 flex justify-end gap-4">

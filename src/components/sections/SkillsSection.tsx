@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge"
+import { Badge } from "@/components/ui/badge";
 
 const skills = [
   "Windows",
@@ -6,34 +6,20 @@ const skills = [
   "Networking",
   "Troubleshooting",
   "Cybersecurity",
-]
+];
 
 const SkillsSection = () => {
   return (
     <section id="skills">
-      <div className="mx-auto max-w-3xl space-y-8">
-        
-        {/* Title */}
-        <h2 className="text-2xl font-semibold tracking-tight">
-          Skills
-        </h2>
-
-        {/* Badge List */}
-        <div className="flex flex-wrap gap-3">
-          {skills.map((skill, index) => (
-            <Badge
-              key={index}
-              variant="default"
-              className="px-4 py-1 text-sm"
-            >
-              {skill}
-            </Badge>
-          ))}
-        </div>
-
+      <div className="flex flex-wrap gap-3">
+        {skills.map((skill, index) => (
+          <Badge key={index} variant="default" className="px-4 py-1 text-sm">
+            {skill}
+          </Badge>
+        ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default SkillsSection
+export default SkillsSection;

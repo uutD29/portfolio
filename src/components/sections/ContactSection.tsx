@@ -1,5 +1,28 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "../ui/badge";
+import { Github, Instagram, Linkedin, Mail } from "lucide-react";
+import { AnimatedTooltip } from "../ui/animated-tooltip";
+
+const socialLinks = [
+  {
+    id: 1,
+    name: "GitHub",
+    url: "https://github.com/uutD29/",
+    icon: <Github className="w-6 h-6" />,
+  },
+  {
+    id: 2,
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/uhud-tarbani-459541379/",
+    icon: <Linkedin className="w-6 h-6" />,
+  },
+  {
+    id: 3,
+    name: "Mail",
+    url: "mailto:uhud.trb@gmail.com",
+    icon: <Mail className="w-6 h-6" />,
+  },
+];
 
 const ContactSection = () => {
   return (
@@ -15,23 +38,11 @@ const ContactSection = () => {
           </h2>
 
           <p className="text-muted-foreground leading-relaxed">
-            Need support with IT systems, infrastructure, or modern web
-            development? I’m ready to contribute expertise and deliver results
-            you can count on.
+            If you need someone who understands both cables and code, let’s
+            build something solid.
           </p>
-
-          {/* LinkedIn Button */}
-          <div className="pt-4 gap-4 flex justify-center">
-            <Button asChild size="lg">
-              <a
-                href="https://www.linkedin.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2"
-              >
-                Work With Me
-              </a>
-            </Button>
+          <div className="flex flex-row items-center justify-center my-4 w-full gap-1">
+            <AnimatedTooltip items={socialLinks} />
           </div>
         </div>
       </div>

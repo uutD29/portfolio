@@ -17,7 +17,7 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-lg text-muted-foreground">
-              I’m an IT Support Specialist who enjoys keeping systems running smoothly and secure.
+              IT Support specialist who builds websites on the side. Focused on making technology reliable, secure, and easy to use.
             </p>
           </div>
 
