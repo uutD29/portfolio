@@ -1,7 +1,7 @@
 const AboutSection = () => {
   return (
     <section id="about">
-      <div className="max-w-3xl mx-auto space-y-6">
+      <div className="max-w-3xl mx-auto space-y-4">
         <h2 className="text-2xl font-semibold tracking-tight">
           About
         </h2>

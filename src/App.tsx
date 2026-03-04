@@ -6,7 +6,7 @@ import ExperienceSection from './components/sections/ExperienceSection'
 import SkillsSection from './components/sections/SkillsSection'
 import ProjectsSection from './components/sections/ProjectsSection'
 import ContactSection from './components/sections/ContactSection'
-import { CertificatesCarousel } from './components/sections/CertificationsSection'
+import { Certificates } from './components/sections/Certification-timeline'
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         <SkillsSection/>
         <AboutSection />
         <ExperienceSection />
-        <CertificatesCarousel/>
+        <Certificates/>
         <ProjectsSection />
         <ContactSection/>
       </main>
