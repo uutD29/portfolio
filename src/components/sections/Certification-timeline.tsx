@@ -4,6 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "../ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
+import { motion } from "motion/react";
 
 const certificates = [
   {
@@ -31,11 +32,23 @@ const certificates = [
 export function Certificates() {
   return (
     <section id="certificates" className="py-12 relative space-y-4 px-4">
-      <h2 className="text-2xl font-semibold tracking-tight">Certification</h2>
+      <motion.h2 
+        initial={{ opacity: 0, x: 20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="text-2xl font-semibold tracking-tight"
+      >
+        Certification
+      </motion.h2>
 
-      {certificates.map((cert) => (
-        <div
+      {certificates.map((cert, index) => (
+        <motion.div
           key={cert.id}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: index * 0.15 }}
           className="relative border-l border-border pl-6 space-y-8"
         >
           <Avatar className="absolute -left-4">
@@ -65,7 +78,7 @@ export function Certificates() {
               </a>
             </Button>
           </div>
-        </div>
+        </motion.div>
       ))}
     </section>
   );

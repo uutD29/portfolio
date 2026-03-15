@@ -18,6 +18,7 @@ import {
   DialogTrigger,
   DialogClose,
 } from "@/components/ui/dialog";
+import { motion } from "motion/react";
 
 const projects = [
   {
@@ -37,7 +38,13 @@ const ProjectsSection = () => {
     <section id="projects">
       <div className="mx-auto max-w-5xl px-4 space-y-12">
 
-        <div className="text-center space-y-6">
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center space-y-6"
+        >
           <Badge variant="secondary" className="px-4 py-1">
             Projects
           </Badge>
@@ -49,33 +56,41 @@ const ProjectsSection = () => {
           <p className="text-muted-foreground leading-relaxed">
             A showcase of my web development projects, highlighting modern, functional websites built with current frameworks and best practices
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid gap-8 sm:grid-cols-2">
           {projects.map((project, index) => (
             <Dialog key={index}>
-              <Card className="relative w-full pt-0 overflow-hidden justify-between">
-                <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="relative z-20 aspect-video w-full object-cover"
-                />
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="h-full"
+              >
+                <Card className="relative w-full pt-0 overflow-hidden justify-between h-full">
+                  <div className="absolute inset-0 z-30 aspect-video bg-black/35" />
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="relative z-20 aspect-video w-full object-cover"
+                  />
 
-                <CardHeader>
-                  <CardAction>
-                    <Badge variant="secondary">{project.badge}</Badge>
-                  </CardAction>
-                  <CardTitle>{project.title}</CardTitle>
-                  <CardDescription>{project.description}</CardDescription>
-                </CardHeader>
+                  <CardHeader>
+                    <CardAction>
+                      <Badge variant="secondary">{project.badge}</Badge>
+                    </CardAction>
+                    <CardTitle>{project.title}</CardTitle>
+                    <CardDescription>{project.description}</CardDescription>
+                  </CardHeader>
 
-                <CardFooter>
-                  <DialogTrigger asChild>
-                    <Button className="w-full">View Project</Button>
-                  </DialogTrigger>
-                </CardFooter>
-              </Card>
+                  <CardFooter>
+                    <DialogTrigger asChild>
+                      <Button className="w-full">View Project</Button>
+                    </DialogTrigger>
+                  </CardFooter>
+                </Card>
+              </motion.div>
 
               <DialogContent className="sm:max-w-lg">
                 <DialogHeader>
@@ -116,14 +131,21 @@ const ProjectsSection = () => {
             </Dialog>
           ))}
 
-          <Card className="flex aspect-[4/5] items-center justify-center border-dashed bg-muted">
-            <div className="text-center space-y-4">
-              <CardTitle className="text-lg">Coming Soon</CardTitle>
-              <CardDescription className="text-base">
-                More exciting projects are on the way.
-              </CardDescription>
-            </div>
-          </Card>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: projects.length * 0.1 }}
+          >
+            <Card className="flex aspect-[4/5] items-center justify-center border-dashed bg-muted h-full">
+              <div className="text-center space-y-4">
+                <CardTitle className="text-lg">Coming Soon</CardTitle>
+                <CardDescription className="text-base">
+                  More exciting projects are on the way.
+                </CardDescription>
+              </div>
+            </Card>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -4,7 +4,6 @@ import Footer from './components/sections/Footer'
 import { Container } from './components/Container'
 import ExperienceSection from './components/sections/ExperienceSection'
 import ProjectsSection from './components/sections/ProjectsSection'
-import ContactSection from './components/sections/ContactSection'
 import { Certificates } from './components/sections/Certification-timeline'
 
 
@@ -17,7 +16,6 @@ function App() {
         <ExperienceSection />
         <Certificates/>
         <ProjectsSection />
-        <ContactSection/>
       </main>
       <Footer />
     </Container>

@@ -1,4 +1,5 @@
 import { Badge } from "../ui/badge";
+import { motion } from "motion/react";
 
 const experiences = [
   {
@@ -20,8 +21,14 @@ const ExperienceSection = () => {
     <section id="experience">
       <div className="mx-auto max-w-3xl px-4 space-y-16">
         
-        {/* Header */}
-        <div className="text-center space-y-6">
+
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center space-y-6"
+        >
           <Badge variant="secondary" className="px-4 py-1">
             Experience
           </Badge>
@@ -35,12 +42,19 @@ const ExperienceSection = () => {
             allowed me to maintain reliable systems, strengthen security
             practices, and support teams in fast-paced environments.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Timeline */}
+
         <div className="relative border-l border-border pl-6 space-y-12">
           {experiences.map((exp, index) => (
-            <div key={index} className="relative space-y-2">
+            <motion.div 
+              key={index} 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              className="relative space-y-2"
+            >
               <p className="text-sm text-muted-foreground">
                 {exp.period}
               </p>
@@ -52,7 +66,7 @@ const ExperienceSection = () => {
               <p className="text-muted-foreground">
                 {exp.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
 
