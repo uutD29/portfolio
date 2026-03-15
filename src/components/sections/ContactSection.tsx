@@ -1,24 +1,28 @@
 import { Badge } from "../ui/badge";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { AnimatedTooltip } from "../ui/animated-tooltip";
+import AnimatedTooltipPreview from "../animated-tooltip-demo";
 
 const socialLinks = [
   {
     id: 1,
     name: "GitHub",
-    url: "https://github.com/uutD29/",
+    description: "Open GitHub",
+    href: "https://github.com/uutD29/",
     icon: <Github className="w-6 h-6" />,
   },
   {
     id: 2,
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/uhud-tarbani-459541379/",
+    description: "Open LinkedIn",
+    href: "https://www.linkedin.com/in/uhud-tarbani-459541379/",
     icon: <Linkedin className="w-6 h-6" />,
   },
   {
     id: 3,
-    name: "Mail",
-    url: "mailto:uhud.trb@gmail.com",
+    name: "Email",
+    description: "Send email",
+    href: "mailto:uhud.trb@gmail.com",
     icon: <Mail className="w-6 h-6" />,
   },
 ];
@@ -40,7 +44,7 @@ const ContactSection = () => {
             If you need someone who understands both cables and code, let’s
             build something solid.
           </p>
-          <div className="flex flex-row items-center justify-center my-4 w-full gap-1">
+          <div className="flex flex-row items-center justify-center w-full">
             <AnimatedTooltip items={socialLinks} />
           </div>
         </div>
