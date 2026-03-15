@@ -1,7 +1,6 @@
 import { Badge } from "../ui/badge";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { AnimatedTooltip } from "../ui/animated-tooltip";
-import AnimatedTooltipPreview from "../animated-tooltip-demo";
 
 const socialLinks = [
   {
