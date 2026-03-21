@@ -5,6 +5,7 @@ import { Container } from './components/Container'
 import ExperienceSection from './components/sections/ExperienceSection'
 import ProjectsSection from './components/sections/ProjectsSection'
 import { Certificates } from './components/sections/Certification-timeline'
+import ContactSection from './components/sections/Contact'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <ExperienceSection />
         <Certificates/>
         <ProjectsSection />
+        <ContactSection/>
       </main>
       <Footer />
     </Container>

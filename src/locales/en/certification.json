@@ -1,0 +1,13 @@
+{
+  "certification_title": "Certification",
+
+  "cert1_issuer": "Google",
+  "cert1_name": "Google IT Support",
+  "cert1_description": "A comprehensive program covering system administration, networking, cybersecurity, and IT operations with practical, real-world applications.",
+  "cert1_button": "View Certificate",
+
+  "cert2_issuer": "Microsoft",
+  "cert2_name": "Microsoft IT Support Specialist",
+  "cert2_description": "A structured learning path focused on Windows administration, network management, cloud fundamentals, and enterprise IT support practices.",
+  "cert2_button": "View Certificate"
+}

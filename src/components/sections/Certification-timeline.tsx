@@ -1,37 +1,40 @@
-"use client";
+"use client"
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "../ui/badge";
-import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
-import { motion } from "motion/react";
-
-const certificates = [
-  {
-    id: 1,
-    issuer: "Google",
-    name: "Google IT Support",
-    description:
-      "Complete program with multiple courses on system administration, networking, cybersecurity, and IT operations for real-world scenarios.",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/3/3c/Google_Favicon_2025.svg",
-    year: "2022",
-    certificateImage: "/cert/Google-IWVL7LZUUVBQ9.jpg",
-  },
-  {
-    id: 2,
-    issuer: "Microsoft",
-    name: "Microsoft IT Support Specialist",
-    description:
-      "Series of courses on Windows administration, network management, cloud fundamentals, and enterprise-level IT support practices.",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Microsoft_logo_-_2012_%28vertical%29.svg",
-    year: "2023",
-    certificateImage: "/cert/Microsoft-QB0VFRW9Q8R9.jpg",
-  },
-];
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Badge } from "../ui/badge"
+import { Button } from "@/components/ui/button"
+import { ExternalLink } from "lucide-react"
+import { motion } from "motion/react"
+import { useTranslation } from "react-i18next"
 
 export function Certificates() {
+  const { t } = useTranslation()
+
+  const certificates = [
+    {
+      id: 1,
+      issuer: t("cert1_issuer"),
+      name: t("cert1_name"),
+      description: t("cert1_description"),
+      logo: "https://upload.wikimedia.org/wikipedia/commons/3/3c/Google_Favicon_2025.svg",
+      year: "2022",
+      certificateImage: "/cert/Google-IWVL7LZUUVBQ9.jpg",
+      button: t("cert1_button"),
+    },
+    {
+      id: 2,
+      issuer: t("cert2_issuer"),
+      name: t("cert2_name"),
+      description: t("cert2_description"),
+      logo: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Microsoft_logo_-_2012_%28vertical%29.svg",
+      year: "2023",
+      certificateImage: "/cert/Microsoft-QB0VFRW9Q8R9.jpg",
+      button: t("cert2_button"),
+    },
+  ]
+
   return (
-    <section id="certificates" className="py-12 relative space-y-4 px-4">
+    <section id="certifications" className="py-12 relative space-y-4 px-4">
       <motion.h2 
         initial={{ opacity: 0, x: 20 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -39,7 +42,7 @@ export function Certificates() {
         transition={{ duration: 0.6 }}
         className="text-2xl font-semibold tracking-tight"
       >
-        Certification
+        {t("certification_title")}
       </motion.h2>
 
       {certificates.map((cert, index) => (
@@ -64,7 +67,9 @@ export function Certificates() {
 
             <h3 className="text-lg font-semibold mt-1">{cert.name}</h3>
 
-            <p className="text-muted-foreground mb-4">{cert.description}</p>
+            <p className="text-muted-foreground mb-4">
+              {cert.description}
+            </p>
 
             <Button variant="outline" size="sm" asChild>
               <a
@@ -74,12 +79,12 @@ export function Certificates() {
                 className="inline-flex items-center gap-2"
               >
                 <ExternalLink className="size-3" />
-                View Certificate
+                {cert.button}
               </a>
             </Button>
           </div>
         </motion.div>
       ))}
     </section>
-  );
+  )
 }

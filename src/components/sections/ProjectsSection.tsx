@@ -1,5 +1,5 @@
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import {
   Card,
   CardAction,
@@ -7,7 +7,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/components/ui/card"
 
 import {
   Dialog,
@@ -17,23 +17,25 @@ import {
   DialogTitle,
   DialogTrigger,
   DialogClose,
-} from "@/components/ui/dialog";
-import { motion } from "motion/react";
+} from "@/components/ui/dialog"
 
-const projects = [
-  {
-    title: "SportON Website",
-    description:
-      "E-commerce website built with Next.js and Tailwind CSS.",
-    image: "/images/project1.png",
-    badge: "E-Commerce",
-    liveUrl: "https://sport-on-fe.vercel.app/", 
-    details:
-      "Full-stack e-commerce platform developed using Next.js and Tailwind CSS. The project includes a dynamic product listing system, category-based browsing, and structured UI components for product presentation. Designed with a focus on clean layout architecture, reusable components, and organized page structure to simulate a real-world online store experience.",
-  },
-];
+import { motion } from "motion/react"
+import { useTranslation } from "react-i18next"
 
 const ProjectsSection = () => {
+  const { t } = useTranslation()
+
+  const projects = [
+    {
+      title: t("project1_name"),
+      description: t("project1_description"),
+      image: "/images/project1.png",
+      badge: t("project1_category"),
+      liveUrl: "https://sport-on-fe.vercel.app/",
+      details: t("project1_details"),
+    },
+  ]
+
   return (
     <section id="projects">
       <div className="mx-auto max-w-5xl px-4 space-y-12">
@@ -46,15 +48,15 @@ const ProjectsSection = () => {
           className="text-center space-y-6"
         >
           <Badge variant="secondary" className="px-4 py-1">
-            Projects
+            {t("projects_title")}
           </Badge>
 
           <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
-            Some of My Work
+            {t("projects_subtitle")}
           </h2>
 
           <p className="text-muted-foreground leading-relaxed">
-            A showcase of my web development projects, highlighting modern, functional websites built with current frameworks and best practices
+            {t("projects_description")}
           </p>
         </motion.div>
 
@@ -86,7 +88,9 @@ const ProjectsSection = () => {
 
                   <CardFooter>
                     <DialogTrigger asChild>
-                      <Button className="w-full">View Project</Button>
+                      <Button className="w-full">
+                        {t("project1_button")}
+                      </Button>
                     </DialogTrigger>
                   </CardFooter>
                 </Card>
@@ -105,14 +109,16 @@ const ProjectsSection = () => {
                     className="w-full rounded-lg"
                   />
 
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {project.details}
-                    </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {project.details}
+                  </p>
                 </div>
 
                 <div className="mt-6 flex justify-end gap-4">
                   <DialogClose asChild>
-                    <Button variant="outline">Close</Button>
+                    <Button variant="outline">
+                      {t("button_close")}
+                    </Button>
                   </DialogClose>
 
                   {project.liveUrl ? (
@@ -121,10 +127,12 @@ const ProjectsSection = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Button>Live Preview</Button>
+                      <Button>{t("button_live")}</Button>
                     </a>
                   ) : (
-                    <Button disabled>Coming Soon</Button>
+                    <Button disabled>
+                      {t("projects_coming_title")}
+                    </Button>
                   )}
                 </div>
               </DialogContent>
@@ -139,9 +147,11 @@ const ProjectsSection = () => {
           >
             <Card className="flex aspect-[4/5] items-center justify-center border-dashed bg-muted h-full">
               <div className="text-center space-y-4">
-                <CardTitle className="text-lg">Coming Soon</CardTitle>
+                <CardTitle className="text-lg">
+                  {t("projects_coming_title")}
+                </CardTitle>
                 <CardDescription className="text-base">
-                  More exciting projects are on the way.
+                  {t("projects_coming_description")}
                 </CardDescription>
               </div>
             </Card>
@@ -149,7 +159,7 @@ const ProjectsSection = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default ProjectsSection;
+export default ProjectsSection

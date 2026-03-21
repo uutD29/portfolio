@@ -1,0 +1,17 @@
+{
+  "projects_title": "Projects",
+  "projects_subtitle": "Some of My Work",
+  "projects_description": "A showcase of my web development projects, highlighting modern, functional websites built with current frameworks and best practices.",
+
+  "project1_name": "SportON Website",
+  "project1_category": "E-Commerce",
+  "project1_description": "An e-commerce website built with Next.js and Tailwind CSS, designed for performance and a smooth user experience.",
+  "project1_details": "Full-stack e-commerce platform built with Next.js and Tailwind CSS. Designed with a clean architecture, reusable components, and structured layout to simulate a real-world online store.",
+  "project1_button": "View Project",
+
+  "projects_coming_title": "Coming Soon",
+  "projects_coming_description": "More exciting projects are currently in progress.",
+
+  "button_close": "Close",
+  "button_live": "Live Preview"
+}

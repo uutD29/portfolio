@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App.tsx";
 import { ThemeProvider } from "./components/theme-provider.tsx";
 import Navbar from "./components/sections/Navbar.tsx";
+import "./i18n"
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

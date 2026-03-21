@@ -1,31 +1,22 @@
-import { ModeToggle } from "@/components/mode-toggle"
+import { ModeToggle } from "@/components/mode-toggle";
+import LanguageSwitch from "../LanguageSwitch";
 
 const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 border-b bg-background">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        
-
         <div>
+          <img src="/logo-b.png" alt="Logo" className="h-4 dark:hidden" />
 
-          <img
-            src="/logo-b.png"
-            alt="Logo"
-            className="h-4 dark:hidden"
-          />
-
-
-          <img
-            src="/logo-w.png"
-            alt="Logo"
-            className="hidden h-4 dark:block"
-          />
+          <img src="/logo-w.png" alt="Logo" className="hidden h-4 dark:block" />
         </div>
-
-        <ModeToggle />
+        <div className="flex gap-4">
+          <ModeToggle />
+          <LanguageSwitch />
+        </div>
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

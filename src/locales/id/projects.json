@@ -1,0 +1,17 @@
+{
+  "projects_title": "Proyek",
+  "projects_subtitle": "Beberapa Karya Saya",
+  "projects_description": "Kumpulan proyek web yang menampilkan website modern, fungsional, dan dibangun dengan teknologi terkini serta praktik terbaik.",
+
+  "project1_name": "SportON Website",
+  "project1_category": "E-Commerce",
+  "project1_description": "Website e-commerce yang dikembangkan menggunakan Next.js dan Tailwind CSS, dengan fokus pada performa dan pengalaman pengguna yang optimal.",
+  "project1_details": "Platform e-commerce yang dibangun menggunakan Next.js dan Tailwind CSS, dengan struktur yang rapi, komponen reusable, serta pengalaman seperti aplikasi toko online nyata.",
+  "project1_button": "Lihat Proyek",
+
+  "projects_coming_title": "Segera Hadir",
+  "projects_coming_description": "Proyek-proyek menarik lainnya sedang dalam proses pengembangan.",
+
+  "button_close": "Tutup",
+  "button_live": "Lihat Website"
+}

@@ -1,6 +1,9 @@
-import { motion } from "motion/react";
+import { motion } from "motion/react"
+import { useTranslation } from "react-i18next"
 
 const AboutSection = () => {
+  const { t } = useTranslation()
+
   return (
     <section id="about">
       <motion.div 
@@ -11,11 +14,11 @@ const AboutSection = () => {
         className="max-w-3xl mx-auto space-y-4"
       >
         <h2 className="text-2xl font-semibold tracking-tight">
-          About
+          {t("about_title")}
         </h2>
 
         <p className="text-muted-foreground leading-relaxed text-lg tracking-tight">
-          I work in IT support and spend most of my time making sure systems run smoothly and people can actually get their work done. I enjoy troubleshooting, improving efficiency, and preventing the classic “it was working yesterday” situation.
+          {t("about_description")}
         </p>
       </motion.div>
     </section>

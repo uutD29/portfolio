@@ -1,8 +1,11 @@
-import { motion } from "motion/react";
+import { motion } from "motion/react"
+import { useTranslation } from "react-i18next"
 
 const HeroSection = () => {
+  const { t } = useTranslation() // ⬅️ TANPA namespace (biar aman dulu)
+
   return (
-    <section id="hero" className="">
+    <section id="hero">
       <div className="mx-auto w-full max-w-2xl space-y-8">
         <div className="flex items-center gap-6">
           <motion.div 
@@ -28,9 +31,9 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-3xl md:5xl font-bold tracking-tighter"
+              className="text-3xl md:text-5xl font-bold tracking-tighter"
             >
-              Hi, I'm Uhud 👋
+              {t("hero_title")} {/* ⬅️ pakai key */}
             </motion.h1>
 
             <motion.p 
@@ -39,14 +42,13 @@ const HeroSection = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="text-lg text-muted-foreground"
             >
-              IT Support specialist who builds websites on the side. Focused on making technology reliable, secure, and easy to use.
+              {t("hero_description")} {/* ⬅️ pakai key */}
             </motion.p>
           </div>
-
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default HeroSection;
+export default HeroSection

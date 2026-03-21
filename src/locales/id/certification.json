@@ -1,0 +1,13 @@
+{
+  "certification_title": "Sertifikasi",
+
+  "cert1_issuer": "Google",
+  "cert1_name": "Google IT Support",
+  "cert1_description": "Program komprehensif yang mencakup administrasi sistem, jaringan, keamanan siber, serta operasional IT dengan pendekatan praktik langsung di dunia nyata.",
+  "cert1_button": "Lihat Sertifikat",
+
+  "cert2_issuer": "Microsoft",
+  "cert2_name": "Microsoft IT Support Specialist",
+  "cert2_description": "Rangkaian pembelajaran terstruktur yang berfokus pada administrasi Windows, manajemen jaringan, dasar cloud, serta praktik IT support di level enterprise.",
+  "cert2_button": "Lihat Sertifikat"
+}
